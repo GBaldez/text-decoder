@@ -4,8 +4,16 @@ let input = document.getElementById("text");
 const result = document.querySelector(".result");
 const empty = document.querySelector(".initial");
 const copy = document.querySelector(".copy");
+const pattern = new RegExp("[A-Z!@#$%^&*()_+-=<>?/.,áàãâäéèêëíìîïóòõôöúùûüçÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÖÔÚÙÛÜÇ]");
 
+//Função para criptografar
 const decode = (msg) => {
+    //validação da mensagem
+    if(!msg) return;
+    if(pattern.test(msg)){
+        alert("Não é possível criptografar uma mensagem com caracteres especiais, acentos ou letras maiúsculas!");
+        return;
+    }
     var msgDecoded = "";
     for(let i = 0; i < msg.length; i++){
         if(msg[i] === "a"){
@@ -24,6 +32,7 @@ const decode = (msg) => {
     }
     showResponse(msgDecoded);
 }
+//função para mostrar a mensage criptografada/descriptografada
 const showResponse = (msg) => {
     empty.style.display = "none";
     result.innerHTML = msg;
@@ -36,9 +45,11 @@ const showResponse = (msg) => {
     }
     copyButton.addEventListener("click", () => copyToClipboard(msg));
 }
+//Função para descriptografar
 const encode = (msg) => {
-const replaces = /(?:ai|enter|imes|ober|ufat)/gi;
-let encodeMsg = (key) => {
+    if(!msg) return;
+    const replaces = /(?:ai|enter|imes|ober|ufat)/gi;
+    let encodeMsg = (key) => {
     switch(key){
         case "ai":
             return "a";
@@ -54,6 +65,7 @@ let encodeMsg = (key) => {
 }
 showResponse(msg.replace(replaces, encodeMsg));
 }
+//Função para copiar a mensagem para o clipboard
 const copyToClipboard = (text) => navigator.clipboard.writeText(text);   
 
 //Para passar parâmetros para a função utilizando o addEventListener, é necessário utilizar uma função anônima
