@@ -4,6 +4,8 @@
     --lightGray: #D8DFE8;
     --darkGray: #495057;
     --white: #fff;
+    --grayBolder: #343A40;
+
 }
 
 *{
@@ -88,6 +90,9 @@ button {
 .buttons{
     margin-left: 16rem;
 }
+button:focus{
+    outline: 0;
+}
 #btn-decode{
     background-color: var(--darkBlue);
     color: var(--lightBlue);
@@ -99,9 +104,6 @@ button {
 #btn-decode:active{
     background-color: var(--darkBlue);
     color: var(--lightBlue);
-}
-#btn-decode:focus{
-    outline: 0;
 }
 #btn-encode{
     background-color: var(--lightGray);
@@ -115,8 +117,21 @@ button {
     background-color: var(--lightGray);
     color: var(--darkBlue);
 }
-#btn-encode:focus{
-    outline: 0;
+.btn-copy{
+    background-color: var(--white);
+    color: var(--darkBlue);
+    font-size: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn-copy:hover{
+    background-color: var(--darkBlue);
+    color: var(--lightGray);
+}
+.btn-copy:active{
+    background-color: var(--darkBlue);
+    color: var(--lightGray);
 }
 /*
 =====================================================
@@ -155,15 +170,16 @@ FIELD THAT SHOW THE RESULT
     max-width:24vw;
     background-color: var(--white);
     border-radius: 22px;
-} */
+}
+section {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--darkGray);
+}
 .highlight{
     font-weight: bolder;
-    font-size: 1.2rem;
-    text-align:center;
-    color: var(--darkBlue);
-}
-section p{
-    font-size: 1rem;
+    font-size: 1.5rem;
+    color: var(--grayBolder);
 }
 .attribution{
     display: flex;
@@ -172,34 +188,27 @@ section p{
     color: var(--darkGray);
     font-size: 1rem;
 }
-.btn-copy{
-    background-color: var(--white);
-    color: var(--darkBlue);
-    font-size: 1rem;
-    margin-left: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-.btn-copy:hover{
-    background-color: var(--darkBlue);
-    color: var(--lightGray);
-}
-.btn-copy:active{
-    background-color: var(--darkBlue);
-    color: var(--lightGray);
-}
-.btn-copy:focus{
-    outline: 0;
-}
 /*
 =====================================================
 RESPONSIVE CSS
 =====================================================
 */
-@media screen and (max-width: 1075px) {
+@media only screen and (max-width: 1075px) {
     .wrapper{
         flex-direction: column;
         align-items: center;
+    }
+    .container1{
+        align-items: center;
+    }
+    .buttons{
+        margin-left: 0;
+    }
+    section p{
+        align-self: center;
+    }
+     section img{
+        display: none;
     }
     .container2{
         width: 50rem;
@@ -208,7 +217,48 @@ RESPONSIVE CSS
     button{
         width:30vw;
     }
-    .result{
-        justify-content: flex-start;
+    .container2{
+        align-items: center;
+    }
+    .attribution{
+        display:block;
+        width: auto;
+        text-align: justify; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+    
+@media only screen and (max-width: 600px) {
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    section img{
+        display: none;
+    }
+    .container2 section{
+        width:auto;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        width: 40vw;
+    }
+    
+    .result  {
+        max-width: 50rem;
     }
 }
