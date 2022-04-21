@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Text Decoder</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="assets/css/images/Vector.svg" alt="logo">
+        </div>
+<!-- Input area-->
+        <div class="container1">
+            <div>
+                <label for="texto"></label>
+                <textarea name="text" id="text" cols="60" rows="11" placeholder="Digite o seu texto"></textarea>
+            </div>
+<!--End of input area-->
+<!--Alert and buttons-->
+            <i class="uil uil-exclamation-circle">  Apenas letras minúsculas e sem acento.</i>
+            <div class="buttons">
+                <button id="btn-decode">Criptografar</button>
+                <button id="btn-encode">Descriptografar</button>
+            </div>
+        </div>
+<!--End of buttons-->
+<!--Area to show the text decode/encode or img of no have messages-->
+        
+         <div class="container2">
+             <p class="result"></p>
+            <section class="initial">
+                <img class="noMessages" src="assets/css/images/Highqualityproducts11.svg" alt="">
+                <p class="highlight">Nenhuma Mensagem Encontrada</p>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </section>
+            <div class="copy"></div>
+            </div>
+
+<!--End of field of response-->   
+    <div class="attribution">
+        Desafio feito pela <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Alura</a>. 
+        Solução desenvolvida por <a href="https://www.linkedin.com/in/gabriel-baldez/">Gabriel Baldez</a>.
+    </div>
+    </div>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

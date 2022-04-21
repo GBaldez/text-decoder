@@ -1,0 +1,214 @@
+:root{
+    --lightBlue:#eff1fa; 
+    --darkBlue: #0A3871;
+    --lightGray: #D8DFE8;
+    --darkGray: #495057;
+    --white: #fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*
+=========================================================
+BASE
+=========================================================
+*/
+body{
+    background-color: var(--lightBlue);
+    font-family: Inter;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0px;
+    text-align: left;
+    color:var(--darkBlue);
+    max-height: 100vh;
+}
+
+.wrapper {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.header {
+    width: 100%;
+    margin: 4rem;
+    margin-top: 2rem;
+}
+/*
+=====================================================
+field to digit the text to be decoded
+=====================================================
+*/
+.container1{
+    flex-direction: column; 
+}
+textarea {
+    border: var(--lightBlue);
+    background-color: var(--lightBlue);
+    color: var(--darkBlue);
+    font-size: 1.5rem;
+    text-align:center;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+textarea::placeholder {
+    text-align: center;
+    color:var(--darkBlue);
+  }
+.uil-exclamation-circle{
+    color: var(--darkGray);
+    font-size: 1rem;
+    margin-left: 16rem;
+}
+/*
+=====================================================
+BUTTONS
+=====================================================
+*/
+button {
+    flex-direction: row;
+    border-radius: 22px;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    width: 20vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons{
+    margin-left: 16rem;
+}
+#btn-decode{
+    background-color: var(--darkBlue);
+    color: var(--lightBlue);
+}
+#btn-decode:hover{
+    background-color: var(--lightBlue);
+    color: var(--darkBlue);
+}
+#btn-decode:active{
+    background-color: var(--darkBlue);
+    color: var(--lightBlue);
+}
+#btn-decode:focus{
+    outline: 0;
+}
+#btn-encode{
+    background-color: var(--lightGray);
+    color: var(--darkBlue);
+}
+#btn-encode:hover{
+    background-color: var(--darkBlue);
+    color: var(--lightGray);
+}
+#btn-encode:active{
+    background-color: var(--lightGray);
+    color: var(--darkBlue);
+}
+#btn-encode:focus{
+    outline: 0;
+}
+/*
+=====================================================
+FIELD THAT SHOW THE RESULT
+=====================================================
+*/
+.container2  {
+    width: 24vw;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius: 22px;
+}
+.container2 .result {
+    display: block;
+    word-wrap: break-word;
+}
+.container2 section {
+    width: 24vw;
+    background-color: var(--white);
+    border-radius: 22px;
+}
+.container2 section img{
+    width: 24vw;
+    background-color: var(--white);
+    border-radius: 22px;
+}
+.noMessages{
+    height: 45vh;
+}
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    max-width:24vw;
+    background-color: var(--white);
+    border-radius: 22px;
+} */
+.highlight{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-align:center;
+    color: var(--darkBlue);
+}
+section p{
+    font-size: 1rem;
+}
+.attribution{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: var(--darkGray);
+    font-size: 1rem;
+}
+.btn-copy{
+    background-color: var(--white);
+    color: var(--darkBlue);
+    font-size: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn-copy:hover{
+    background-color: var(--darkBlue);
+    color: var(--lightGray);
+}
+.btn-copy:active{
+    background-color: var(--darkBlue);
+    color: var(--lightGray);
+}
+.btn-copy:focus{
+    outline: 0;
+}
+/*
+=====================================================
+RESPONSIVE CSS
+=====================================================
+*/
+@media screen and (max-width: 1075px) {
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container2{
+        width: 50rem;
+        height: 30vh;
+    }
+    button{
+        width:30vw;
+    }
+    .result{
+        justify-content: flex-start;
+    }
+}
