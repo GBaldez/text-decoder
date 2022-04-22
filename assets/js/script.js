@@ -32,7 +32,7 @@ const decode = (msg) => {
     }
     showResponse(msgDecoded);
 }
-//função para mostrar a mensage criptografada/descriptografada
+//função para mostrar a mensagem criptografada/descriptografada
 const showResponse = (msg) => {
     empty.style.display = "none";
     result.innerHTML = msg;

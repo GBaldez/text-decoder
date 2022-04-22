@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,200&family=Roboto:wght@300;400&family=Syne+Tactile&display=swap');
+
 :root{
     --lightBlue:#eff1fa; 
     --darkBlue: #0A3871;
@@ -20,7 +22,7 @@ BASE
 */
 body{
     background-color: var(--lightBlue);
-    font-family: Inter;
+    font-family:"Roboto Mono","monospace";
     font-size: 34px;
     font-weight: 700;
     line-height: 41px;
@@ -173,12 +175,12 @@ FIELD THAT SHOW THE RESULT
 }
 section {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--darkGray);
 }
 .highlight{
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--grayBolder);
 }
 .attribution{
@@ -217,13 +219,16 @@ RESPONSIVE CSS
     button{
         width:30vw;
     }
-    .container2{
-        align-items: center;
+    .container2 section{
+        width:auto;
     }
     .attribution{
         display:block;
         width: auto;
         text-align: justify; 
+    }
+    .copy {
+        align-self: center;
     }
 }
 
@@ -232,9 +237,15 @@ RESPONSIVE CSS
         flex-direction: column;
         align-items: center;
     }
+    .container2 section{
+        width:auto;
+    }
     .buttons{
         display: flex;
         justify-content: center;
+    }
+    .copy {
+        align-self: center;
     }
     
 }
@@ -257,8 +268,10 @@ RESPONSIVE CSS
     button{
         width: 40vw;
     }
-    
     .result  {
         max-width: 50rem;
+    }
+    .copy {
+        align-self: center;
     }
 }
